@@ -26,6 +26,5 @@ namespace Warehouse.Repositories
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Person> People { get; set; }
     }
 }
