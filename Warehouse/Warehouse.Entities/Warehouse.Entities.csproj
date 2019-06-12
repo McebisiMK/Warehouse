@@ -67,16 +67,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Warehouse.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="WarehouseModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>WarehouseModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="Warehouse_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Warehouse.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
