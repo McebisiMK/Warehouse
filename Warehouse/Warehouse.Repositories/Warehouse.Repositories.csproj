@@ -38,6 +38,7 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -50,7 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Products\ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resolutions\DependencyResolver.cs" />
+    <Compile Include="Suppliers\SupplierRepository.cs" />
     <Compile Include="WarehouseModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -89,6 +93,14 @@
     <ProjectReference Include="..\Warehouse.Entities\Warehouse.Entities.csproj">
       <Project>{178615AD-7699-4F5C-8D35-A8C52B302537}</Project>
       <Name>Warehouse.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warehouse.IRepositories\Warehouse.IRepositories.csproj">
+      <Project>{07F5305E-4465-4A36-8F36-232ECB762B89}</Project>
+      <Name>Warehouse.IRepositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warehouse.Resolver\Warehouse.Resolver.csproj">
+      <Project>{00BE7A8C-6E6D-46D2-A0C8-3208A6256E79}</Project>
+      <Name>Warehouse.Resolver</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

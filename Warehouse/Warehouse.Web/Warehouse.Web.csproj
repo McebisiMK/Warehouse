@@ -190,6 +190,8 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\SupplierController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -253,7 +255,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -289,6 +290,26 @@
     <ProjectReference Include="..\Warehouse.Entities\Warehouse.Entities.csproj">
       <Project>{178615AD-7699-4F5C-8D35-A8C52B302537}</Project>
       <Name>Warehouse.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warehouse.IRepositories\Warehouse.IRepositories.csproj">
+      <Project>{07f5305e-4465-4a36-8f36-232ecb762b89}</Project>
+      <Name>Warehouse.IRepositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warehouse.IServices\Warehouse.IServices.csproj">
+      <Project>{27DBB517-118E-4434-AF2E-DD60759397F1}</Project>
+      <Name>Warehouse.IServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warehouse.Repositories\Warehouse.Repositories.csproj">
+      <Project>{8b15bbca-0d6f-415d-bcf7-2aecdb0f5dc6}</Project>
+      <Name>Warehouse.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warehouse.Resolver\Warehouse.Resolver.csproj">
+      <Project>{00BE7A8C-6E6D-46D2-A0C8-3208A6256E79}</Project>
+      <Name>Warehouse.Resolver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warehouse.Services\Warehouse.Services.csproj">
+      <Project>{38878411-6e52-4409-a204-82f804de2254}</Project>
+      <Name>Warehouse.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
