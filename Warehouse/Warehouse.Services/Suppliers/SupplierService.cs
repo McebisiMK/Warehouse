@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using Warehouse.Entities;
-using Warehouse.IRepositories.Suppliers;
+﻿using Warehouse.IRepositories.UnitsOfWork;
 using Warehouse.IServices.Suppliers;
 
 namespace Warehouse.Services.Suppliers
 {
     public class SupplierService : ISupplierService
     {
-        private ISupplierRepository supplierRepository;
+        private IUnitOfWork unitOfWork;
 
-        public SupplierService(ISupplierRepository supplierRepository)
+        public SupplierService(IUnitOfWork unitOfWork)
         {
-            this.supplierRepository = supplierRepository;
+            this.unitOfWork = unitOfWork;
         }
     }
 }

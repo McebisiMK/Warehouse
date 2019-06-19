@@ -1,17 +1,15 @@
-﻿using System.Collections.Generic;
-using Warehouse.Entities;
-using Warehouse.IRepositories.Products;
+﻿using Warehouse.IRepositories.UnitsOfWork;
 using Warehouse.IServices.Products;
 
 namespace Warehouse.Services.Products
 {
     public class ProductService : IProductService
     {
-        private IProductRepository productRepository;
+        private IUnitOfWork unitOfWork;
 
-        public ProductService(IProductRepository productRepository)
+        public ProductService(IUnitOfWork unitOfWork)
         {
-            this.productRepository = productRepository;
+            this.unitOfWork = unitOfWork;
         }
     }
 }
