@@ -1,8 +1,6 @@
 ﻿using System.ComponentModel.Composition;
-using Warehouse.IRepositories.Products;
-using Warehouse.IRepositories.Suppliers;
-using Warehouse.Repositories.Products;
-using Warehouse.Repositories.Suppliers;
+using Warehouse.IRepositories.UnitsOfWork;
+using Warehouse.Repositories.UnitsOfWork;
 using Warehouse.Resolver;
 
 namespace Warehouse.Repositories.Resolutions
@@ -12,8 +10,7 @@ namespace Warehouse.Repositories.Resolutions
     {
         public void SetUp(IRegisterComponent registerComponent)
         {
-            registerComponent.RegisterType<IProductRepository, ProductRepository>();
-            registerComponent.RegisterType<ISupplierRepository, SupplierRepository>();
+            registerComponent.RegisterType<IUnitOfWork, UnitOfWork>();
         }
     }
 }
