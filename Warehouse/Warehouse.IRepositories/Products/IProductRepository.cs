@@ -5,6 +5,5 @@ namespace Warehouse.IRepositories.Products
 {
     public interface IProductRepository
     {
-        IEnumerable<Product> GetAll();
     }
 }

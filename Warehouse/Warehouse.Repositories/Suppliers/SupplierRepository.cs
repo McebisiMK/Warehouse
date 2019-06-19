@@ -7,25 +7,11 @@ namespace Warehouse.Repositories.Suppliers
 {
     public class SupplierRepository : ISupplierRepository
     {
-        private WarehouseEntities dbContext;
+        private WarehouseEntities context;
 
-        public SupplierRepository()
+        public SupplierRepository(WarehouseEntities context)
         {
-            dbContext = new WarehouseEntities();
-        }
-
-        public int Add(Supplier supplier)
-        {
-            dbContext.Suppliers.Add(supplier);
-
-            return dbContext.SaveChanges();
-        }
-
-        public IEnumerable<Supplier> GetAll()
-        {
-            var suppliers = dbContext.Suppliers;
-
-            return suppliers.ToList();
+            this.context = context;
         }
     }
 }

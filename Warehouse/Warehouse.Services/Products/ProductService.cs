@@ -13,10 +13,5 @@ namespace Warehouse.Services.Products
         {
             this.productRepository = productRepository;
         }
-
-        public IEnumerable<Product> GetAll()
-        {
-            return productRepository.GetAll();
-        }
     }
 }

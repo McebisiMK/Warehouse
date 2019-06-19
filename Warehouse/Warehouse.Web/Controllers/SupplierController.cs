@@ -17,22 +17,5 @@ namespace Warehouse.Web.Controllers
         {
             this.supplierService = supplierService;
         }
-
-        [HttpGet]
-        [Route("getall")]
-        public IHttpActionResult GetAll()
-        {
-            var suppliers = supplierService.GetAll();
-
-            return Ok(suppliers);
-        }
-
-
-        //[HttpPost]
-        //[Route("add")]
-        //public IHttpActionResult Add(Supplier, )
-        //{
-        //    var supplier = supplierService.Add();
-        //}
     }
 }

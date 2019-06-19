@@ -14,25 +14,5 @@ namespace Warehouse.Services.Suppliers
         {
             this.supplierRepository = supplierRepository;
         }
-
-        public int Add(Supplier supplier)
-        {
-            supplier = new Supplier()
-            {
-                Id = 2,
-                Name = "Mce",
-                Quantity = 5,
-                ExpiryDate = DateTime.Now
-            };
-
-            var results = supplierRepository.Add(supplier);
-
-            return results;
-        }
-
-        public IEnumerable<Supplier> GetAll()
-        {
-            return supplierRepository.GetAll();
-        }
     }
 }

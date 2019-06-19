@@ -5,6 +5,6 @@ namespace Warehouse.IServices.Products
 {
     public interface IProductService
     {
-        IEnumerable<Product> GetAll();
+
     }
 }

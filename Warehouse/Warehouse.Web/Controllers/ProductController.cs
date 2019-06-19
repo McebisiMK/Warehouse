@@ -12,14 +12,5 @@ namespace Warehouse.Web.Controllers
         {
             this.productService = productService;
         }
-
-        [HttpGet]
-        [Route("getall")]
-        public IHttpActionResult GetAll()
-        {
-            var products = productService.GetAll();
-
-            return Ok(products);
-        }
     }
 }

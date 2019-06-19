@@ -1,20 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Warehouse.Entities;
+using Warehouse.GenericRepository;
 using Warehouse.IRepositories.Products;
 
 namespace Warehouse.Repositories.Products
 {
-    public class ProductRepository : IProductRepository
+    public class ProductRepository : GenericRepository<Product>, IProductRepository
     {
-        public IEnumerable<Product> GetAll()
-        {
-            using (var dbContext = new WarehouseEntities())
-            {
-                var products = dbContext.Products;
+        private WarehouseEntities context;
 
-                return products.ToList();
-            }
+        public ProductRepository(WarehouseEntities context): base(context)
+        {
+            this.context = context;
         }
     }
 }
